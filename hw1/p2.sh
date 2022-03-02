@@ -20,12 +20,24 @@ traverse() {
     local return_val=0
 
     if [[ $all -eq 0 ]]; then
-        local children=(`ls $directory`)
+        local children=(`ls $directory | LC_ALL=C sort`)
     else
-        local children=(`ls -a $directory`)        
+        local children=(`ls -a $directory | LC_ALL=C sort`)        
     fi
 
     local child_count=${#children[@]}
+
+    for ((i=0;i<$child_count - 1;i++)); do
+        for ((j=0;j<$child_count - $i - 1; j++)); do
+            # echo $i $j 
+            compare_str ${children[$j]} ${children[$j+1]}
+            if [[ $? -eq 1 ]]; then
+                local tmp=${children[$j]}
+                children[$j]=${children[$j+1]}
+                children[$j+1]=$tmp
+            fi
+        done
+    done
 
     if [ $rev -eq 1 ]; then
         for ((i=0, j=$(($child_count - 1));$j > $i;i++, j--)); do
@@ -73,6 +85,35 @@ traverse() {
     done
     return $return_val
 
+}
+
+ord() {
+  LC_CTYPE=C printf '%d' "'$1"
+}
+
+compare_str() {
+    local ret=0
+    local min=0
+    if [[ ${#1} < ${#2} ]]; then
+        min=${#1}
+        ret=0
+    else 
+        min=${#2}
+        ret=1
+    fi
+    # echo $1 $2
+    for ((idx=0;idx<min;idx++)); do
+        local a=$(ord ${1:$idx:1})
+        local b=$(ord ${2:$idx:1})
+        # echo ${1:$i:1} $a ${2:$i:1} $b
+        if [[ $a -lt $b ]]; then
+            return 0
+        elif [[ $a -gt $b ]]; then
+            return 1
+        fi
+    done
+
+    return $ret
 }
 
 stack_pop() {

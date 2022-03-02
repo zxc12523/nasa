@@ -66,7 +66,7 @@ for ((i=4;i<${#argv[@]};i++)); do
 done
 
 
-IFS=$'\n' sorted=($(sort <<<"${array[*]}"))
+IFS=$'\n' LC_ALL=C sorted=($(sort <<<"${array[*]}"))
 
 if [[ ${#sorted[@]} -gt 0 ]]; then
     # printf "%s\n" "${sorted[@]}"
