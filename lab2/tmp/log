@@ -1,0 +1,318 @@
+--2022-02-21 19:18:58--  https://judgegirl.csie.org/downloads/testdata/4/0.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘./tmp/0.in’
+
+     0K                                                       100%  662K=0s
+
+2022-02-21 19:18:58 (662 KB/s) - ‘./tmp/0.in’ saved [6/6]
+
+--2022-02-21 19:18:58--  https://judgegirl.csie.org/downloads/testdata/4/0.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/0.out’
+
+     0K                                                       100%  227K=0s
+
+2022-02-21 19:18:58 (227 KB/s) - ‘./tmp/0.out’ saved [2/2]
+
+--2022-02-21 19:18:58--  https://judgegirl.csie.org/downloads/testdata/4/1.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8 [text/plain]
+Saving to: ‘./tmp/1.in’
+
+     0K                                                       100%  883K=0s
+
+2022-02-21 19:18:58 (883 KB/s) - ‘./tmp/1.in’ saved [8/8]
+
+--2022-02-21 19:18:58--  https://judgegirl.csie.org/downloads/testdata/4/1.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/1.out’
+
+     0K                                                       100%  224K=0s
+
+2022-02-21 19:18:58 (224 KB/s) - ‘./tmp/1.out’ saved [2/2]
+
+--2022-02-21 19:18:58--  https://judgegirl.csie.org/downloads/testdata/4/2.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘./tmp/2.in’
+
+     0K                                                       100%  673K=0s
+
+2022-02-21 19:18:58 (673 KB/s) - ‘./tmp/2.in’ saved [6/6]
+
+--2022-02-21 19:18:58--  https://judgegirl.csie.org/downloads/testdata/4/2.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/2.out’
+
+     0K                                                       100%  218K=0s
+
+2022-02-21 19:18:59 (218 KB/s) - ‘./tmp/2.out’ saved [2/2]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/3.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11 [text/plain]
+Saving to: ‘./tmp/3.in’
+
+     0K                                                       100%  691K=0s
+
+2022-02-21 19:18:59 (691 KB/s) - ‘./tmp/3.in’ saved [11/11]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/3.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/3.out’
+
+     0K                                                       100%  210K=0s
+
+2022-02-21 19:18:59 (210 KB/s) - ‘./tmp/3.out’ saved [2/2]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/4.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9 [text/plain]
+Saving to: ‘./tmp/4.in’
+
+     0K                                                       100%  337K=0s
+
+2022-02-21 19:18:59 (337 KB/s) - ‘./tmp/4.in’ saved [9/9]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/4.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4 [application/octet-stream]
+Saving to: ‘./tmp/4.out’
+
+     0K                                                       100%  426K=0s
+
+2022-02-21 19:18:59 (426 KB/s) - ‘./tmp/4.out’ saved [4/4]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/5.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33 [text/plain]
+Saving to: ‘./tmp/5.in’
+
+     0K                                                       100% 3.36M=0s
+
+2022-02-21 19:18:59 (3.36 MB/s) - ‘./tmp/5.in’ saved [33/33]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/5.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11 [application/octet-stream]
+Saving to: ‘./tmp/5.out’
+
+     0K                                                       100% 1.00M=0s
+
+2022-02-21 19:18:59 (1.00 MB/s) - ‘./tmp/5.out’ saved [11/11]
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/6.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-02-21 19:18:59 ERROR 404: Not Found.
+
+--2022-02-21 19:18:59--  https://judgegirl.csie.org/downloads/testdata/4/6.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-02-21 19:18:59 ERROR 404: Not Found.
+
+1c1
+< 6
+\ No newline at end of file
+---
+> 6
+1c1
+< 0
+\ No newline at end of file
+---
+> 0
+1c1
+< 3
+\ No newline at end of file
+---
+> 3
+1c1
+< 0
+\ No newline at end of file
+---
+> 0
+1c1
+< 203
+\ No newline at end of file
+---
+> 203
+1c1
+< 1000000001
+\ No newline at end of file
+---
+> 1000000001
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/0.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘./tmp/0.in’
+
+     0K                                                       100%  302K=0s
+
+2022-02-21 19:21:15 (302 KB/s) - ‘./tmp/0.in’ saved [6/6]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/0.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/0.out’
+
+     0K                                                       100%  216K=0s
+
+2022-02-21 19:21:15 (216 KB/s) - ‘./tmp/0.out’ saved [2/2]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/1.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8 [text/plain]
+Saving to: ‘./tmp/1.in’
+
+     0K                                                       100%  855K=0s
+
+2022-02-21 19:21:15 (855 KB/s) - ‘./tmp/1.in’ saved [8/8]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/1.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/1.out’
+
+     0K                                                       100%  221K=0s
+
+2022-02-21 19:21:15 (221 KB/s) - ‘./tmp/1.out’ saved [2/2]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/2.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 6 [text/plain]
+Saving to: ‘./tmp/2.in’
+
+     0K                                                       100%  658K=0s
+
+2022-02-21 19:21:15 (658 KB/s) - ‘./tmp/2.in’ saved [6/6]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/2.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/2.out’
+
+     0K                                                       100%  213K=0s
+
+2022-02-21 19:21:15 (213 KB/s) - ‘./tmp/2.out’ saved [2/2]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/3.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11 [text/plain]
+Saving to: ‘./tmp/3.in’
+
+     0K                                                       100% 1.27M=0s
+
+2022-02-21 19:21:15 (1.27 MB/s) - ‘./tmp/3.in’ saved [11/11]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/3.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2 [application/octet-stream]
+Saving to: ‘./tmp/3.out’
+
+     0K                                                       100%  212K=0s
+
+2022-02-21 19:21:15 (212 KB/s) - ‘./tmp/3.out’ saved [2/2]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/4.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9 [text/plain]
+Saving to: ‘./tmp/4.in’
+
+     0K                                                       100%  983K=0s
+
+2022-02-21 19:21:15 (983 KB/s) - ‘./tmp/4.in’ saved [9/9]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/4.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4 [application/octet-stream]
+Saving to: ‘./tmp/4.out’
+
+     0K                                                       100%  434K=0s
+
+2022-02-21 19:21:15 (434 KB/s) - ‘./tmp/4.out’ saved [4/4]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/5.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 33 [text/plain]
+Saving to: ‘./tmp/5.in’
+
+     0K                                                       100% 3.43M=0s
+
+2022-02-21 19:21:15 (3.43 MB/s) - ‘./tmp/5.in’ saved [33/33]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/5.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11 [application/octet-stream]
+Saving to: ‘./tmp/5.out’
+
+     0K                                                       100% 1.17M=0s
+
+2022-02-21 19:21:15 (1.17 MB/s) - ‘./tmp/5.out’ saved [11/11]
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/6.in
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-02-21 19:21:15 ERROR 404: Not Found.
+
+--2022-02-21 19:21:15--  https://judgegirl.csie.org/downloads/testdata/4/6.out
+Resolving judgegirl.csie.org (judgegirl.csie.org)... 140.112.31.208
+Connecting to judgegirl.csie.org (judgegirl.csie.org)|140.112.31.208|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2022-02-21 19:21:15 ERROR 404: Not Found.
+
