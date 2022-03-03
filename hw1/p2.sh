@@ -61,54 +61,47 @@ traverse() {
                         dict_add_key $inode_num
                         traverse "$directory/$child" "$prefix---" $(( $3 + 1 ))
                         flag_i $find_include $include $child 0 $?
+                        return_val=$(($return_val || $?))
                         dict_rm_key $inode_num
                     else
-                        deter_last_layer $3 $prefix $child
+                        if [[ $3 -eq $layer ]]; then
+                            stack_push "$prefix $child"
+                            flag_i $find_include $include $child 1 1
+                        else
+                            stack_push "$prefix $child (loop)"
+                            flag_i $find_include $include $child 1 1
+                        fi
                     fi
                 fi
             else
-                stack_push "$prefix $child" 
-                dict_add_key $inode_num
-                traverse "$directory/$child" "$prefix---" $(( $3 + 1 ))
-                flag_i $find_include $include $child 0 $?
-                dict_rm_key inode_num
+                dict_find_key $inode_num
+                if [[ $? -eq 0 ]]; then
+                    stack_push "$prefix $child" 
+                    dict_add_key $inode_num
+                    traverse "$directory/$child" "$prefix---" $(( $3 + 1 ))
+                    flag_i $find_include $include $child 0 $?
+                    return_val=$(($return_val || $?))
+                    dict_rm_key $inode_num
+                else
+                    if [[ $3 -eq $layer ]]; then
+                        stack_push "$prefix $child"
+                        flag_i $find_include $include $child 1 1
+                    else
+                        stack_push "$prefix $child (loop)"
+                        flag_i $find_include $include $child 1 1
+                    fi
+                fi
             fi
         else
             stack_push "$prefix $child"
             flag_i $find_include $include $child 1 1
         fi
+        return_val=$(($return_val || $?))
+
     done
+    echo $1 $2 $3 $return_val
     return $return_val
 
-}
-
-ord() {
-  LC_CTYPE=C printf '%d' "'$1"
-}
-
-compare_str() {
-    local ret=0
-    local min=0
-    if [[ ${#1} < ${#2} ]]; then
-        min=${#1}
-        ret=0
-    else 
-        min=${#2}
-        ret=1
-    fi
-    # echo $1 $2
-    for ((idx=0;idx<min;idx++)); do
-        local a=$(ord ${1:$idx:1})
-        local b=$(ord ${2:$idx:1})
-        # echo ${1:$i:1} $a ${2:$i:1} $b
-        if [[ $a -lt $b ]]; then
-            return 0
-        elif [[ $a -gt $b ]]; then
-            return 1
-        fi
-    done
-
-    return $ret
 }
 
 dict_add_key() {
@@ -146,19 +139,8 @@ find_substr() {
     fi
 }
 
-deter_last_layer() {
-    if [[ $1 -eq $layer ]]; then
-        stack_push "$2 $3"
-        dict_add_key $3
-        flag_i $find_include $include $3 1 1
-    else
-        stack_push "$2 $3 (loop)"
-        dict_add_key $3
-        flag_i $find_include $include $3 1 1
-    fi
-}
-
 flag_i() {
+    echo $3 $4 $5
     if [[ $4 -eq 1 ]]; then
         if [[ $1 -eq 1 ]]; then
             find_substr $2 $3
@@ -199,7 +181,9 @@ done
 
 [ $1 ] && path=$1 || path="."
 
-echo $path
+stack_push $path
+tmp=$(stat -L -c '%i' "$path")
+dict_add_key $tmp
 
 traverse $path "|" 0
 
