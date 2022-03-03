@@ -7,6 +7,7 @@ dont_follow_sym=0
 myflag=${@:2:100}
 find_include=0
 stack=()
+declare -A dict
 end=0
 
 traverse() {
@@ -27,18 +28,6 @@ traverse() {
 
     local child_count=${#children[@]}
 
-    for ((i=0;i<$child_count - 1;i++)); do
-        for ((j=0;j<$child_count - $i - 1; j++)); do
-            # echo $i $j 
-            compare_str ${children[$j]} ${children[$j+1]}
-            if [[ $? -eq 1 ]]; then
-                local tmp=${children[$j]}
-                children[$j]=${children[$j+1]}
-                children[$j+1]=$tmp
-            fi
-        done
-    done
-
     if [ $rev -eq 1 ]; then
         for ((i=0, j=$(($child_count - 1));$j > $i;i++, j--)); do
             local tmp=${children[$i]}
@@ -50,6 +39,8 @@ traverse() {
     for idx in ${!children[@]} 
     do 
         local child="${children[$idx]##*/}"
+        local inode_num=$(stat -L -c '%i' "$directory/$child")
+
         if [ $child = "." ] ; then
             continue
         elif [ $child = ".." ]; then
@@ -64,19 +55,23 @@ traverse() {
                     stack_push "${prefix} $child -> $sym_path"
                     flag_i $find_include $include $child 1 1
                 else
-                    find -L "$directory/$child" &> /dev/null
+                    dict_find_key $inode_num
                     if [[ $? -eq 0 ]]; then
                         stack_push "$prefix $child"
+                        dict_add_key $inode_num
                         traverse "$directory/$child" "$prefix---" $(( $3 + 1 ))
                         flag_i $find_include $include $child 0 $?
+                        dict_rm_key $inode_num
                     else
                         deter_last_layer $3 $prefix $child
                     fi
                 fi
             else
                 stack_push "$prefix $child" 
+                dict_add_key $inode_num
                 traverse "$directory/$child" "$prefix---" $(( $3 + 1 ))
                 flag_i $find_include $include $child 0 $?
+                dict_rm_key inode_num
             fi
         else
             stack_push "$prefix $child"
@@ -116,6 +111,22 @@ compare_str() {
     return $ret
 }
 
+dict_add_key() {
+    dict[$1]=1
+}
+
+dict_rm_key() {
+    unset dict[$1]
+}
+
+dict_find_key() {
+    if [[ -v dict[$1] ]]; then
+        return 1
+    else
+        return 0
+    fi
+}
+
 stack_pop() {
     if [[ $end -gt 0 ]]; then
         end=$(($end - 1))
@@ -138,9 +149,11 @@ find_substr() {
 deter_last_layer() {
     if [[ $1 -eq $layer ]]; then
         stack_push "$2 $3"
+        dict_add_key $3
         flag_i $find_include $include $3 1 1
     else
         stack_push "$2 $3 (loop)"
+        dict_add_key $3
         flag_i $find_include $include $3 1 1
     fi
 }
