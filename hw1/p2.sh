@@ -99,7 +99,7 @@ traverse() {
         return_val=$(($return_val || $?))
 
     done
-    echo $1 $2 $3 $return_val
+    # echo $1 $2 $3 $return_val
     return $return_val
 
 }
@@ -140,7 +140,7 @@ find_substr() {
 }
 
 flag_i() {
-    echo $3 $4 $5
+    # echo $3 $4 $5
     if [[ $4 -eq 1 ]]; then
         if [[ $1 -eq 1 ]]; then
             find_substr $2 $3

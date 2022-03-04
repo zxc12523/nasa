@@ -10,9 +10,8 @@ done
 
 deter_unix_time() {
     var=$1
-    timestamp=$(date +%s)
 
-    if [ -n "$var" ] && [ "$var" -eq "$var" ] 2>/dev/null && [ 0 -le $var ] && [ $var -le $timestamp ]; then
+    if [ -n "$var" ] && [ "$var" -eq "$var" ] 2>/dev/null && [ 0 -le $var ]; then
         exit_value=0
     else
         exit_value=1
@@ -39,9 +38,10 @@ read_file() {
     exec < $filename
     while read line 
     do
-        timestamp=$(date -d "${line:1:24}" +%s)
+        real_time=$(echo $line | cut -d "]" -f 1 | cut -d "[" -f 2)
+        timestamp=$(date -d "$real_time" +%s)
         if [[ $timestamp -ge ${argv[1]} && $timestamp -le ${argv[3]} ]]; then
-             array[${#array[@]}]=$(printf "%015d %s\n" "$timestamp" "${line:27:100}")
+             array[${#array[@]}]=$(printf "%020d %s\n" "$timestamp" "${line:27:100}")
         fi
     done
 }
@@ -72,7 +72,8 @@ if [[ ${#sorted[@]} -gt 0 ]]; then
     # printf "%s\n" "${sorted[@]}"
     for str in ${sorted[@]}
     do
-        t=$(echo ${str:1:14} | bc)
-        printf "%d %s\n" "$t" "${str:16:100}"
+        t=$(echo ${str:1:19} | bc)
+        tmp=$(echo $str | cut -d "[" -f 2)
+        printf "%d %s\n" "$t" "[$tmp"
     done
 fi

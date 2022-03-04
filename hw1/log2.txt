@@ -664,4 +664,4 @@
 [Mon Dec 05 18:45:53 2005] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
 [Sun Dec 04 06:55:00 2005] [notice] jk2_init() Found child 32649 in scoreboard slot 10
 [Sun Dec 04 06:20:46 2005] [error] mod_jk child workerEnv in error state 8
-[Sun Dec 04 20:41:47 2005] [notice] jk2_init() Found child 2045 in scoreboard slot 9
+[Sun Dec 04 20:41:47 20050] [notice] jk2_init() Found child 2045 in scoreboard slot 9
